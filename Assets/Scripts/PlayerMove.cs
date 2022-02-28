@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Floor" || collision.gameObject.name == "Moving Platform")
+        if(collision.gameObject.name == "Floor" || collision.gameObject.name == "Moving Platform" || collision.gameObject.name == "Square" || collision.gameObject.name == "Hinge")
         {
             isGrounded = true;
             Debug.Log("Hit something", collision.gameObject);
@@ -60,6 +60,11 @@ public class PlayerMove : MonoBehaviour
             Destroy(gameObject);
             ScoreScript.scoreValue = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        if(collision.gameObject.name == "Capsule")
+        {
+            jumpStrength = 8.0f;
         }
     }
 
