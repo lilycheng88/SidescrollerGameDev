@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class CheckDestory : MonoBehaviour
 {
-    public bool collided;
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        collided = true;
-    }
+    public static int doorDestroy;
 
     private void Update()
     {
-
-        if (collided && ScoreScript.scoreValue == 12)
+        if (doorDestroy > 4)
         {
             Destroy(gameObject);
         }

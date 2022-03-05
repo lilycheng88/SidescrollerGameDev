@@ -20,6 +20,7 @@ public class PlayerMove : MonoBehaviour
     public float distanceToCheck = 0.5f;
     bool canJump = false;
     bool isGrounded = false;
+    bool facingRight = true; 
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class PlayerMove : MonoBehaviour
     {
         moveX = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             canJump = true;
         }
@@ -68,6 +69,13 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        Debug.Log("Flip!");
+        transform.Rotate(0f, 180f, 0f);
+    }
+
     private void FixedUpdate()
     {
         rigidBody.velocity = new Vector2(moveX * moveSpeed, rigidBody.velocity.y);
@@ -76,6 +84,15 @@ public class PlayerMove : MonoBehaviour
         {
             canJump = false;
             Jump();
+        }
+
+        if (moveX > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if (moveX < 0 && facingRight)
+        {
+            Flip();
         }
     }
 

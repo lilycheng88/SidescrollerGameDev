@@ -19,5 +19,7 @@ public class LoadLevels : MonoBehaviour
         {
             SceneManager.LoadScene("Menu");
         }
+
+        CheckDestory.doorDestroy = 0;
     }
 }
