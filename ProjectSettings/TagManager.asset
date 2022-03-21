@@ -11,6 +11,7 @@ TagManager:
   - 
   - Water
   - UI
+  - Obstacle
   - 
   - 
   - 
@@ -35,8 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - BACKGROUND
   m_SortingLayers:
   - name: Default
     uniqueID: 0

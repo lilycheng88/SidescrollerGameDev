@@ -11,10 +11,10 @@ public class PlayerMove : MonoBehaviour
     Rigidbody2D rigidBody;
 
     [SerializeField]
-    float jumpStrength = 6.0f;
+    public static float jumpStrength = 6.0f;
 
     [SerializeField]
-    float moveSpeed = 5.0f;
+    float moveSpeed = 4.0f;
     float moveX;
 
     public float distanceToCheck = 0.5f;
