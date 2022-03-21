@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: a1a4b9f00793c4a05915a8f73fc542b0
+guid: 0f908ebdd44ba4b56b9331f67ca912c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7234134701135475366
-    second: FoxThief_0
+      213: -589251672030835453
+    second: FoxThief (4)_0
   - first:
-      213: -28217919582061539
-    second: FoxThief_1
+      213: 6424168085298804060
+    second: FoxThief (4)_1
   - first:
-      213: 3717358507574667379
-    second: FoxThief_2
+      213: -1048599689589094711
+    second: FoxThief (4)_2
   - first:
-      213: 4680414157675126492
-    second: FoxThief_3
+      213: -6877766400502151002
+    second: FoxThief (4)_3
   - first:
-      213: 6596638613100575057
-    second: FoxThief_4
+      213: 6624210334475407345
+    second: FoxThief (4)_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,106 +118,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FoxThief_0
+      name: FoxThief (4)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 231
-        width: 161
-        height: 231
+        y: 280
+        width: 196
+        height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a2b18ebe2fc46460800000000000000
-      internalID: 7234134701135475366
+      spriteID: 30d0c4de9be82d7f0800000000000000
+      internalID: -589251672030835453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FoxThief_1
+      name: FoxThief (4)_1
       rect:
         serializedVersion: 2
-        x: 161
-        y: 231
-        width: 161
-        height: 231
+        x: 196
+        y: 280
+        width: 196
+        height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1cb20f93ffbb9ff0800000000000000
-      internalID: -28217919582061539
+      spriteID: c55f2ad36da372950800000000000000
+      internalID: 6424168085298804060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FoxThief_2
+      name: FoxThief (4)_2
       rect:
         serializedVersion: 2
-        x: 322
-        y: 231
-        width: 161
-        height: 231
+        x: 392
+        y: 280
+        width: 196
+        height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 378a3c20ed5b69330800000000000000
-      internalID: 3717358507574667379
+      spriteID: 9c605765320a271f0800000000000000
+      internalID: -1048599689589094711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FoxThief_3
+      name: FoxThief (4)_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 161
-        height: 231
+        width: 196
+        height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cde5fe5e0eb24f040800000000000000
-      internalID: 4680414157675126492
+      spriteID: 6a8c3f116e34d80a0800000000000000
+      internalID: -6877766400502151002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FoxThief_4
+      name: FoxThief (4)_4
       rect:
         serializedVersion: 2
-        x: 161
+        x: 196
         y: 0
-        width: 161
-        height: 231
+        width: 196
+        height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1593c7d3ed7fb8b50800000000000000
-      internalID: 6596638613100575057
+      spriteID: 1ffc0efd33cedeb50800000000000000
+      internalID: 6624210334475407345
       vertices: []
       indices: 
       edges: []

@@ -9,9 +9,10 @@ using UnityEngine.SceneManagement;
 public class PlayerMove : MonoBehaviour
 {
     Rigidbody2D rigidBody;
+    public Animator animator;
 
     [SerializeField]
-    public static float jumpStrength = 6.0f;
+    public static float jumpStrength = 7.0f;
 
     [SerializeField]
     float moveSpeed = 4.0f;
@@ -80,7 +81,7 @@ public class PlayerMove : MonoBehaviour
     {
         rigidBody.velocity = new Vector2(moveX * moveSpeed, rigidBody.velocity.y);
 
-        if(canJump == true)
+        if (canJump == true)
         {
             canJump = false;
             Jump();
@@ -99,8 +100,11 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         PlayerControls();
+        animator.SetFloat("Speed", Mathf.Abs(moveX));
+        animator.SetBool("OffGround", !isGrounded);
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, 0, 100), transform.position.y, transform.position.z);
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -49.6f, 10), transform.position.y, transform.position.z);
 
     }
 }
