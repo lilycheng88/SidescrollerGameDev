@@ -46,15 +46,13 @@ public class PlayerMove : MonoBehaviour
         isGrounded = false;
 
         rigidBody.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
-        Debug.Log("JUMP!", gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Floor" || collision.gameObject.name == "Moving Platform" || collision.gameObject.name == "Square" || collision.gameObject.name == "Hinge")
+        if(collision.gameObject.name == "Floor" || collision.gameObject.name == "Platform" || collision.gameObject.name == "Square" || collision.gameObject.name == "Hinge")
         {
             isGrounded = true;
-            Debug.Log("Hit something", collision.gameObject);
         }
 
         if(collision.gameObject.name == "Spike")
@@ -64,10 +62,6 @@ public class PlayerMove : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        if(collision.gameObject.name == "Capsule")
-        {
-            jumpStrength = 8.0f;
-        }
     }
 
     private void Flip()
@@ -95,6 +89,7 @@ public class PlayerMove : MonoBehaviour
         {
             Flip();
         }
+
     }
 
     private void Update()

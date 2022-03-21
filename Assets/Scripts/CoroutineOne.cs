@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CapsuleCollider2D))]
+[RequireComponent(typeof(SpriteRenderer))]
+
 
 public class CoroutineOne : MonoBehaviour
 {
     CapsuleCollider2D capsuleCollider;
+    SpriteRenderer spriteRenderer;
+
     public bool collected = false;
 
     private void Awake()
     {
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collected = true;
-        //Destroy(gameObject);
     }
 
     void Update()
@@ -25,6 +29,8 @@ public class CoroutineOne : MonoBehaviour
         if (collected)
         {
             StartCoroutine(HighJump());
+            spriteRenderer.enabled = false;
+            capsuleCollider.enabled = false;
         }
 
     }
@@ -36,6 +42,6 @@ public class CoroutineOne : MonoBehaviour
         yield return new WaitForSeconds(10.0f);
         PlayerMove.jumpStrength = 4.0f;
         Debug.Log("Coroutine one has ended...");
-
+        Destroy(gameObject);
     }
 }
