@@ -8,6 +8,7 @@ public class ScoreScript : MonoBehaviour
 {
     public TextMeshProUGUI score;
     public static int scoreValue = 0;
+    public static bool canShoot;
 
     // Start is called before the first frame update
     void Start()
@@ -19,5 +20,13 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         score.text = scoreValue + "";
+
+        if(scoreValue > 0)
+        {
+            canShoot = true;
+        } else
+        {
+            canShoot = false;
+        }
     }
 }

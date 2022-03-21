@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraClamp : MonoBehaviour
 {
-    private Quaternion myRotation;
+    public Quaternion myRotation;
 
     private void Start()
     {
