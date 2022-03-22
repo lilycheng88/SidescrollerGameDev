@@ -5,7 +5,7 @@ using UnityEngine;
 public class LadderMovement : MonoBehaviour
 {
     private float vertical;
-    private float speed = 8.0f;
+    private float speed = 4.0f;
     private bool isLadder;
     private bool isClimbing;
 
@@ -30,7 +30,7 @@ public class LadderMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
         } else
         {
-            rb.gravityScale = 1.5f;
+            rb.gravityScale = 1.0f;
         }
     }
 

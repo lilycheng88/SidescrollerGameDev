@@ -11,8 +11,7 @@ public class PlayerMove : MonoBehaviour
     Rigidbody2D rigidBody;
     public Animator animator;
 
-    [SerializeField]
-    public static float jumpStrength = 7.0f;
+    public static float jumpStrength = 8.0f;
 
     [SerializeField]
     float moveSpeed = 4.0f;
@@ -60,6 +59,17 @@ public class PlayerMove : MonoBehaviour
             Destroy(gameObject);
             BulletNum.scoreValue = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Flip();
+            MoveOnTrigger4.canStartMoving = false;
+        }
+
+        if (collision.gameObject.CompareTag("Laser"))
+        {
+            Destroy(gameObject);
+            BulletNum.scoreValue = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Flip();
+            MoveOnTrigger4.canStartMoving = false;
         }
 
     }
@@ -98,8 +108,7 @@ public class PlayerMove : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(moveX));
         animator.SetBool("OffGround", !isGrounded);
 
-
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -49.6f, 10), transform.position.y, transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -100.0f, 10), transform.position.y, transform.position.z);
 
     }
 }

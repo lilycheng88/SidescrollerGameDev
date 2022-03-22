@@ -18,9 +18,13 @@ void Update()
     {
         followObject = GameObject.Find("Player");
 
-        if (followObject.transform.position.y > 1)
+        if (followObject.transform.position.y > 15.9)
         {
-            transform.position = new Vector3(Mathf.Clamp(followObject.transform.position.x, -49.6f, 0), Mathf.Clamp(followObject.transform.position.y, followObject.transform.position.y, 100), transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(followObject.transform.position.x, -49.6f, 0), 19.0f, transform.position.z);
+            Debug.Log("Higher Up");
+        } else if (followObject.transform.position.y > 6)
+        {
+            transform.position = new Vector3(Mathf.Clamp(followObject.transform.position.x, -49.6f, 0), 9.0f, transform.position.z);
             Debug.Log("Higher Up");
         }
         else

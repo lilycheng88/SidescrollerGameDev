@@ -6,12 +6,13 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 
 
-public class CoroutineOne : MonoBehaviour
+public class CoroutineTwo : MonoBehaviour
 {
     CapsuleCollider2D capsuleCollider;
     SpriteRenderer spriteRenderer;
 
     public bool collected = false;
+    float currScore = BulletNum.scoreValue;
 
     private void Awake()
     {
@@ -28,20 +29,20 @@ public class CoroutineOne : MonoBehaviour
     {
         if (collected)
         {
-            StartCoroutine(HighJump());
+            StartCoroutine(BulletShower());
             spriteRenderer.enabled = false;
             capsuleCollider.enabled = false;
         }
 
     }
 
-    IEnumerator HighJump()
+    IEnumerator BulletShower()
     {
-        Debug.Log("Coroutine one has started...");
-        PlayerMove.jumpStrength = 12.0f;
+        Debug.Log("Coroutine two has started...");
+        BulletNum.scoreValue = 30;
         yield return new WaitForSeconds(6.0f);
-        PlayerMove.jumpStrength = 7.0f;
-        Debug.Log("Coroutine one has ended...");
+        PlayerMove.jumpStrength = currScore;
+        Debug.Log("Coroutine two has ended...");
         Destroy(gameObject);
     }
 }
