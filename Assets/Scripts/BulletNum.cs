@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ScoreScript : MonoBehaviour
+public class BulletNum : MonoBehaviour
 {
     public TextMeshProUGUI score;
     public static int scoreValue = 0;

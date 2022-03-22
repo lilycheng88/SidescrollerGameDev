@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class CameraClamp : MonoBehaviour
 {
+    [SerializeField]
     public Quaternion myRotation;
+    public GameObject followObject;
 
     private void Start()
     {
-        myRotation = this.transform.rotation;
+        myRotation = gameObject.transform.rotation;
 
     }
 
 void Update()
     {
-        var followObject = GameObject.Find("Player");
+        followObject = GameObject.Find("Player");
 
         if (followObject.transform.position.y > 1)
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(CircleCollider2D))]
 
-public class CoinDestroy : MonoBehaviour
+public class BulletCollect : MonoBehaviour
 {
 
     SpriteRenderer spriteRenderer;
@@ -27,7 +27,7 @@ public class CoinDestroy : MonoBehaviour
     {
         if(collected)
         {
-            ScoreScript.scoreValue++;
+            BulletNum.scoreValue++;
             Destroy(gameObject);
         }
 

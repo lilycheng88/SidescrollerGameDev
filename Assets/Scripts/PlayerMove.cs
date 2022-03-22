@@ -16,12 +16,12 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField]
     float moveSpeed = 4.0f;
-    float moveX;
+    public static float moveX;
 
     public float distanceToCheck = 0.5f;
     bool canJump = false;
     bool isGrounded = false;
-    bool facingRight = true; 
+    public static bool facingRight = true; 
 
     private void Awake()
     {
@@ -58,7 +58,7 @@ public class PlayerMove : MonoBehaviour
         if(collision.gameObject.name == "Spike")
         {
             Destroy(gameObject);
-            ScoreScript.scoreValue = 0;
+            BulletNum.scoreValue = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 

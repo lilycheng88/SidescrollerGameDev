@@ -10,11 +10,11 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && ScoreScript.canShoot)
+        if (Input.GetKeyDown(KeyCode.Space) && BulletNum.canShoot)
         {
             Shoot();
-            ScoreScript.scoreValue--;
-        } else if (Input.GetKeyDown(KeyCode.Space) && !(ScoreScript.canShoot))
+            BulletNum.scoreValue--;
+        } else if (Input.GetKeyDown(KeyCode.Space) && !(BulletNum.canShoot))
         {
             Debug.Log("No Bullets");
         }

@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: 0f908ebdd44ba4b56b9331f67ca912c0
+guid: 0d0eb9d8fc20240aeb25bb28f40b57e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -589251672030835453
-    second: FoxThief (4)_0
+      213: 548087449444986717
+    second: FoxThief (5)_0
   - first:
-      213: 6424168085298804060
-    second: FoxThief (4)_1
+      213: -5312836017108701215
+    second: FoxThief (5)_1
   - first:
-      213: -1048599689589094711
-    second: FoxThief (4)_2
-  - first:
-      213: -6877766400502151002
-    second: FoxThief (4)_3
-  - first:
-      213: 6624210334475407345
-    second: FoxThief (4)_4
+      213: -5857360440118469708
+    second: FoxThief (5)_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FoxThief (4)_0
+      name: FoxThief (5)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,20 +120,20 @@ TextureImporter:
         width: 196
         height: 280
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30d0c4de9be82d7f0800000000000000
-      internalID: -589251672030835453
+      spriteID: d5fa402a1a23b9700800000000000000
+      internalID: 548087449444986717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FoxThief (4)_1
+      name: FoxThief (5)_1
       rect:
         serializedVersion: 2
         x: 196
@@ -147,41 +141,20 @@ TextureImporter:
         width: 196
         height: 280
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c55f2ad36da372950800000000000000
-      internalID: 6424168085298804060
+      spriteID: 1efa5528ac30546b0800000000000000
+      internalID: -5312836017108701215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FoxThief (4)_2
-      rect:
-        serializedVersion: 2
-        x: 392
-        y: 280
-        width: 196
-        height: 280
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c605765320a271f0800000000000000
-      internalID: -1048599689589094711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FoxThief (4)_3
+      name: FoxThief (5)_2
       rect:
         serializedVersion: 2
         x: 0
@@ -189,35 +162,14 @@ TextureImporter:
         width: 196
         height: 280
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a8c3f116e34d80a0800000000000000
-      internalID: -6877766400502151002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FoxThief (4)_4
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 0
-        width: 196
-        height: 280
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ffc0efd33cedeb50800000000000000
-      internalID: 6624210334475407345
+      spriteID: 4bb105d96b976bea0800000000000000
+      internalID: -5857360440118469708
       vertices: []
       indices: 
       edges: []

@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.name != "Player")
+        if (hitInfo.name == "Enemy")
         {
             Debug.Log(hitInfo.name);
             Destroy(gameObject);
@@ -24,6 +24,25 @@ public class Bullet : MonoBehaviour
         if(hitInfo.name == "Door Destroy")
         {
             CheckDestory.doorDestroy++;
+        }
+    }
+
+    private void Flip()
+    {
+        PlayerMove.facingRight = !PlayerMove.facingRight;
+        Debug.Log("Flip!");
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+    private void FixedUpdate()
+    {
+        if (PlayerMove.moveX > 0 && !PlayerMove.facingRight)
+        {
+            Flip();
+        }
+        else if (PlayerMove.moveX < 0 && PlayerMove.facingRight)
+        {
+            Flip();
         }
     }
 
