@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(CapsuleCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(AudioSource))]
 
 
 public class CoroutineOne : MonoBehaviour
@@ -13,10 +14,13 @@ public class CoroutineOne : MonoBehaviour
 
     public bool collected = false;
 
+    private AudioSource audioSource;
+
     private void Awake()
     {
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,6 +35,7 @@ public class CoroutineOne : MonoBehaviour
             StartCoroutine(HighJump());
             spriteRenderer.enabled = false;
             capsuleCollider.enabled = false;
+            audioSource.Play();
         }
 
     }

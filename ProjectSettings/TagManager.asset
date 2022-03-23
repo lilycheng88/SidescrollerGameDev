@@ -7,6 +7,7 @@ TagManager:
   - Ladder
   - Laser
   - GM
+  - Floor
   layers:
   - Default
   - TransparentFX

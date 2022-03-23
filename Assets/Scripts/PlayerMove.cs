@@ -13,8 +13,12 @@ public class PlayerMove : MonoBehaviour
 
     public static float jumpStrength = 8.0f;
 
+    private AudioSource audioSource;
+    public AudioClip death;
+    
+
     [SerializeField]
-    float moveSpeed = 4.0f;
+    public static float moveSpeed = 4.0f;
     public static float moveX;
 
     public float distanceToCheck = 0.5f;
@@ -25,6 +29,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void PlayerControls()
@@ -56,6 +61,7 @@ public class PlayerMove : MonoBehaviour
 
         if(collision.gameObject.name == "Spike")
         {
+
             Destroy(gameObject);
             BulletNum.scoreValue = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -72,6 +78,7 @@ public class PlayerMove : MonoBehaviour
             //Flip();
             facingRight = true;
             MoveOnTrigger4.canStartMoving = false;
+            
         }
 
     }

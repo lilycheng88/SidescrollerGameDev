@@ -7,14 +7,12 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 
 
-public class CoroutineTwo : MonoBehaviour
+public class CoroutineThree : MonoBehaviour
 {
     CapsuleCollider2D capsuleCollider;
     SpriteRenderer spriteRenderer;
 
     public bool collected = false;
-
-    float currScore = BulletNum.scoreValue;
 
     private AudioSource audioSource;
 
@@ -34,7 +32,7 @@ public class CoroutineTwo : MonoBehaviour
     {
         if (collected)
         {
-            StartCoroutine(BulletShower());
+            StartCoroutine(HighSpeed());
             spriteRenderer.enabled = false;
             capsuleCollider.enabled = false;
             audioSource.Play();
@@ -42,13 +40,13 @@ public class CoroutineTwo : MonoBehaviour
 
     }
 
-    IEnumerator BulletShower()
+    IEnumerator HighSpeed()
     {
-        Debug.Log("Coroutine two has started...");
-        BulletNum.scoreValue = 30;
+        Debug.Log("Coroutine one has started...");
+        PlayerMove.moveSpeed = 8.0f;
         yield return new WaitForSeconds(6.0f);
-        PlayerMove.jumpStrength = currScore;
-        Debug.Log("Coroutine two has ended...");
+        PlayerMove.moveSpeed = 4.0f;
+        Debug.Log("Coroutine one has ended...");
         Destroy(gameObject);
     }
 }
