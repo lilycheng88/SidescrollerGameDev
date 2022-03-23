@@ -43,9 +43,9 @@ public class CoroutineOne : MonoBehaviour
     IEnumerator HighJump()
     {
         Debug.Log("Coroutine one has started...");
-        PlayerMove.jumpStrength = 12.0f;
+        PlayerMove.jumpStrength = 10.0f;
         yield return new WaitForSeconds(6.0f);
-        PlayerMove.jumpStrength = 7.0f;
+        PlayerMove.jumpStrength = 8.0f;
         Debug.Log("Coroutine one has ended...");
         Destroy(gameObject);
     }

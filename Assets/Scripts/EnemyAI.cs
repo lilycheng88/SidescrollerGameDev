@@ -19,9 +19,11 @@ public class EnemyAI : MonoBehaviour
 
     public Transform enemyGFX;
 
+    public bool isMoving;
+
     //public bool hit;
 
-    //public Animator animator;
+    public Animator animator;
 
 
     // Start is called before the first frame update
@@ -29,7 +31,6 @@ public class EnemyAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-
         InvokeRepeating("UpdatePath", 0f, .5f);
     }
 
@@ -83,10 +84,15 @@ public class EnemyAI : MonoBehaviour
         if (rb.velocity.x >= 0.01f)
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
+            isMoving = true;
         }
         else if (rb.velocity.x <= -0.01f)
         {
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+            isMoving = true;
+        } else
+        {
+            isMoving = false;
         }
     }
 
@@ -113,11 +119,8 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    if(hit)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
+    private void Update()
+    {
+        animator.SetBool("IsMoving", isMoving);
+    }
 }

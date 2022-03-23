@@ -20,7 +20,10 @@ public class BulletCollect : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collected = true;
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            collected = true;
+        }
     }
 
     void Update()
