@@ -8,6 +8,8 @@ TagManager:
   - Laser
   - GM
   - Floor
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

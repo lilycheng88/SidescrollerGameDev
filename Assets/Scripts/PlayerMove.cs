@@ -81,6 +81,17 @@ public class PlayerMove : MonoBehaviour
             
         }
 
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            BulletNum.scoreValue = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //Flip();
+            facingRight = true;
+            MoveOnTrigger4.canStartMoving = false;
+
+        }
+
     }
 
     private void Flip()
