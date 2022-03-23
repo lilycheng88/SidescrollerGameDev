@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Floor" || collision.gameObject.name == "Platform" || collision.gameObject.name == "Square" || collision.gameObject.name == "Hinge")
+        if(collision.gameObject.CompareTag("Floor"))
         {
             isGrounded = true;
         }
