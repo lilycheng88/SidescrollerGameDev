@@ -25,9 +25,12 @@ public class CoroutineTwo : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        collected = true;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collected = true;
+        }
     }
 
     void Update()
@@ -45,7 +48,7 @@ public class CoroutineTwo : MonoBehaviour
     IEnumerator BulletShower()
     {
         Debug.Log("Coroutine two has started...");
-        BulletNum.scoreValue = 30;
+        BulletNum.scoreValue = 15;
         yield return new WaitForSeconds(6.0f);
         PlayerMove.jumpStrength = currScore;
         Debug.Log("Coroutine two has ended...");

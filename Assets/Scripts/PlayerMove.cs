@@ -59,7 +59,7 @@ public class PlayerMove : MonoBehaviour
             isGrounded = true;
         }
 
-        if(collision.gameObject.name == "Spike")
+        if(collision.gameObject.CompareTag("Spike"))
         {
 
             Destroy(gameObject);
