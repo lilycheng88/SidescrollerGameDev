@@ -24,6 +24,8 @@ public class Bullet : MonoBehaviour
         if(hitInfo.name == "Door Destroy")
         {
             CheckDestory.doorDestroy++;
+            Destroy(gameObject);
+
         }
     }
 

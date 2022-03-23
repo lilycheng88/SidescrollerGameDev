@@ -59,7 +59,8 @@ public class PlayerMove : MonoBehaviour
             Destroy(gameObject);
             BulletNum.scoreValue = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Flip();
+            //Flip();
+            facingRight = true;
             MoveOnTrigger4.canStartMoving = false;
         }
 
@@ -68,7 +69,8 @@ public class PlayerMove : MonoBehaviour
             Destroy(gameObject);
             BulletNum.scoreValue = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Flip();
+            //Flip();
+            facingRight = true;
             MoveOnTrigger4.canStartMoving = false;
         }
 
@@ -77,7 +79,6 @@ public class PlayerMove : MonoBehaviour
     private void Flip()
     {
         facingRight = !facingRight;
-        Debug.Log("Flip!");
         transform.Rotate(0f, 180f, 0f);
     }
 

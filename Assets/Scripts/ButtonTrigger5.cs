@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class ButtonTrigger5 : MonoBehaviour
 {
-
+    public Animator animator;
+    public bool pressed;
     BoxCollider2D boxCollider;
     SpriteRenderer spriteRenderer;
 
@@ -24,8 +25,6 @@ public class ButtonTrigger5 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        spriteRenderer.color = new Color(1.0f, 0.5f, 0.25f, 0.5f); //red, blue, green, alpha
-
         MoveOnTrigger4.canStartMoving = true;
 
         Debug.Log("Can Start Moving");
@@ -34,5 +33,10 @@ public class ButtonTrigger5 : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("Exit Trigger.");
+    }
+
+    private void Update()
+    {
+        animator.SetBool("IsPressed", MoveOnTrigger4.canStartMoving);
     }
 }

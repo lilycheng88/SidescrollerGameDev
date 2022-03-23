@@ -10,7 +10,7 @@ public class LoadLevels : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SceneManager.LoadScene("Sidescroller");
+            SceneManager.LoadScene("Level 1");
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {

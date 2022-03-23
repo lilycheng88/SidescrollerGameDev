@@ -1,16 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class CheckDestory : MonoBehaviour
 {
+    public Animator animator;
     public static int doorDestroy;
+    public bool collided;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Player") {
+            collided = true;
+        } else
+        {
+            collided = false;
+        }
+    }
 
     private void Update()
     {
-        if (doorDestroy > 4)
+        animator.SetInteger("FireDamage", doorDestroy);
+
+        if (doorDestroy > 3 && collided)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("Level 2");
         }
     }
 }
